@@ -1,9 +1,7 @@
-import { DataSection } from "./components/DataSection.js";
 import { Section } from "./components/Section.js";
 import { useState } from "react";
 
 function App() {
-
   const [title, setTitle] = useState("Untitle");
 
   const onKeyUpHandler = (event) => {
@@ -32,8 +30,12 @@ function App() {
       {/* Props로 데이터를 전달 할 때
         1. 문자열은 "" 로 전송
         2. 그 외 모든 데이터는 {}에 작성. */}
-      <Section title={title} color="#F00" onKeyUp={onKeyUpHandler} onClick={onClickHandler} />
-      <DataSection>state를 사용하지 않는 컴포넌트</DataSection>
+      <Section
+        title={title}
+        color="#F00"
+        onKeyUp={onKeyUpHandler}
+        onClick={onClickHandler}
+      />
     </main>
   );
 }
